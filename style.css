@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f7fb;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.navbar {
+  background: #2563eb;
+  color: white;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 26px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: bold;
+}
+
+.nav-links .active {
+  border-bottom: 2px solid white;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-bottom: 18px;
+  color: #2563eb;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+li {
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+li button {
+  width: auto;
+  margin-left: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+#wageList div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#wageList span {
+  width: 80px;
+  line-height: 42px;
+}
+
+#wageList input {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    margin: 0 8px;
+  }
+
+  #wageList div {
+    flex-direction: column;
+  }
+
+  #wageList span {
+    width: auto;
+    line-height: normal;
+  }
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.work {
+  background: #16a34a;
+}
+
+.off {
+  background: #dc2626;
+}
+
+.approved {
+  background: #2563eb;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.dash-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dash-card p {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.dash-card h2 {
+  color: #2563eb;
+  font-size: 30px;
+}
+
+.chart-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.chart-row span {
+  width: 80px;
+}
+
+.bar {
+  background: #2563eb;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  min-width: 30px;
+}

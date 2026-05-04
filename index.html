@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShiftMate - 管理画面</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <h1 class="logo">📅 ShiftMate</h1>
+
+    <div class="nav-links">
+      <a href="index.html" class="active">管理画面</a>
+      <a href="shift.html">シフト提出</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="dashboard">
+
+      <div class="dash-card">
+        <p>従業員数</p>
+        <h2 id="staffCount">0</h2>
+      </div>
+
+      <div class="dash-card">
+        <p>提出数</p>
+        <h2 id="shiftCount">0</h2>
+      </div>
+
+      <div class="dash-card">
+        <p>確定数</p>
+        <h2 id="approvedCount">0</h2>
+      </div>
+
+      <div class="dash-card">
+        <p>不足日</p>
+        <h2 id="alertCount">0</h2>
+      </div>
+      <div class="card">
+        <h2>勤務回数グラフ</h2>
+        <div id="chartArea"></div>
+      </div>
+    </div>
+
+    <p class="subtitle">シフト管理ツール</p>
+
+    <!-- 従業員登録 -->
+    <div class="card">
+      <h2>従業員登録</h2>
+
+      <input type="text" id="nameInput" placeholder="名前を入力">
+
+      <button id="addBtn">追加する</button>
+
+      <ul id="staffList"></ul>
+    </div>
+
+    <!-- 提出状況一覧 -->
+    <div class="card">
+      <h2>提出状況一覧</h2>
+
+      <ul id="adminShiftList"></ul>
+    </div>
+
+    <!-- 公平性レポート -->
+    <div class="card">
+      <h2>公平性（給与計算）</h2>
+
+      <div style="margin-bottom: 15px;">
+        <label for="reportMonthInput">対象月:</label>
+        <input type="month" id="reportMonthInput">
+      </div>
+
+      <ul id="reportList"></ul>
+    </div>
+
+    <!-- 不足日アラート -->
+    <div class="card">
+      <h2>不足日</h2>
+
+      <ul id="alertList"></ul>
+    </div>
+    <div class="card">
+      <h2>時給設定</h2>
+      <div id="wageList"></div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

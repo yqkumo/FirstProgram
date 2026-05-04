@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShiftMate - シフト提出</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <h1 class="logo">📅 ShiftMate</h1>
+
+    <div class="nav-links">
+      <a href="index.html">管理画面</a>
+      <a href="shift.html" class="active">シフト提出</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <p class="subtitle">シフト提出画面</p>
+
+    <div class="card">
+
+      <h2>希望シフト入力</h2>
+
+      <!-- 従業員選択 -->
+      <select id="staffSelect"></select>
+
+      <!-- 日付 -->
+      <input type="date" id="dateInput">
+
+      <!-- 昼夜選択 -->
+      <select id="timeSelect">
+        <option value="10:00〜">10:00〜</option>
+        <option value="11:00〜">11:00〜</option>
+        <option value="17:00〜">17:00〜</option>
+        <option value="18:00〜">18:00〜</option>
+        <option value="19:00〜">19:00〜</option>
+      </select>
+
+      <!-- 出勤 / 休み -->
+      <select id="statusSelect">
+        <option value="出勤">出勤</option>
+        <option value="休み">休み</option>
+      </select>
+
+      <!-- 提出ボタン -->
+      <button id="submitShiftBtn">提出する</button>
+
+      <!-- 提出一覧 -->
+      <ul id="shiftList"></ul>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
